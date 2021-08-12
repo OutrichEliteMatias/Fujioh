@@ -349,7 +349,6 @@ function pageUpdatePasswordValidation() {
 			setTimeout(function() {
 				validator.blockFocusCleanup = true;
 				// element.focus();
-        // jQuery('.svg.password-match').css({"display" : "block"});
 				validator.blockFocusCleanup = false;
 			}, 1);
 		}

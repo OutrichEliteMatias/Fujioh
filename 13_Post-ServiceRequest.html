@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>Fujioh</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="assets/css/dropzone/basic.min.css">
+  <link rel="stylesheet" href="assets/css/dropzone/dropzone.min.css">
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/update.css">
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Top Nav -->
+  <div class="top-nav">
+    <div class="container">
+      <div class="col-md-12 text-center text-sm-right">
+        <div class="search-form">
+          <form action="">
+            <input type="text" name="search" id="search" placeholder="Search here...">
+            <button><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+
+        <span><img src="assets/images/sg-logo.png" width="25px" height="25px"></span>
+        <span>Singapore</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#"><img src="assets/images/logo-client.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto text-left">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Warranty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Service Request</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+          </ul>
+          <div class="button-group d-lg-none text-left">
+            <a href="#" class="btn btn-blue">Promotions</a>
+            <a href="#" class="btn btn-gold">Where To Buy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="button-group d-none d-lg-block text-left floating">
+    <a href="#" class="btn btn-blue">Promotions</a>
+    <a href="#" class="btn btn-gold">Where To Buy</a>
+  </div>
+
+  <main>
+
+    <!-- Page Content -->
+    <div class="page-heading servicereq-heading header-text page-heading-update">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content head-left">
+              <h1>SERVICE Request</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container spacer">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-content registration product post-service">
+            <h5>
+              For a service request, please fill in the information required below and we will reply you within 3 working
+              days. For urgent matters, please contact us at 6286 3286 from Monday to Fri from 9am to 1pm and 2pm to 6pm
+              (closed on weekends and public holidays).
+            </h5>
+            <form class="registration dropzone service-request" id="serviceRequest" action="/upload-target">
+              <div class="outer-form">
+                <div class="two-col-pass first-ch">
+                  <label for="name">Product Type<span style="color: red">*</span></label>
+                  <select name="affix" placeholder="XXXXX XXXXXX">
+                    <option>XXXXX XXXXXX</option>
+                  </select>
+                </div>
+
+                <div class="two-col-pass first-ch">
+                  <label for="name">Model<span style="color: red">*</span></label>
+                  <select name="affix" placeholder="XXXXX-XXXXX-XXXXX">
+                    <option>XXXXX-XXXXX-XXXXX</option>
+                  </select>
+                </div>
+              </div>
+              <div class="outer-form">
+                <div class="two-col-pass first-ch serial">
+                  <label class="label-flex" for="name">Serial Number.
+                    <span style="color: red">*</span>
+                    <img class="svg" data-toggle="modal" data-target="#serialModal" src="assets/svg/question.svg" alt="Question">
+                  </label>
+
+                  <select name="affix" placeholder="XXXXX XXXXXX">
+                    <option>XXXXX XXXXXX</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div class="outer-form">
+                <div class="two-col-pass first-ch">
+                  <label for="address">Preferred Date<span style="color: red">*</span></label>
+                  <input type="date" class="datepicker" id="preferredDate" name="preferredDate" placeholder="">
+                </div>
+
+                <div class="two-col-pass last-ch">
+                  <label for="address">Preferred Time Slot <span style="color: red">*</span></label>
+                  <div class="radio-item radio-am">
+                    <input type="radio" id="ritema" name="ritem" value="ropt1" checked="checked">
+                    <label for="ritema">9am - 1pm</label>
+                  </div>
+                  <div class="radio-item radio-pm">
+                    <input type="radio" id="ritemb" name="ritem" value="ropt2">
+                    <label for="ritemb">2pm - 5pm</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="outer-form">
+                <div class="two-col-pass first-ch">
+                  <label for="address">Address<span style="color: red">*</span></label>
+                  <input type="text" id="uniqueAddress" name="address" placeholder="">
+                </div>
+
+                <div class="two-col-pass last-ch">
+                  <label for="address">Postal Code<span style="color: red">*</span></label>
+                  <input type="text" id="postalcode" name="postalcode" placeholder="">
+                </div>
+              </div>
+              <div class="outer-form">
+
+                <div class="two-col-pass first-ch serial">
+                  <label for="name">Issue Type<span style="color: red">*</span></label>
+                  <select name="affix" placeholder="XXXXX XXXXXX">
+                    <option>General</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="outer-form">
+                <div class="two-col-pass first-ch textarea">
+                  <label for="name">Details<span style="color: red">*</span></label>
+                  <textarea name="request" id="request" placeholder="Please state your feedback here"></textarea>
+                </div>
+              </div>
+
+
+
+              <label>Upload Image Related To Inquiry (If Any)</label>
+              <div class="drop-files" id="dropFiles">
+                <div class="dp-outer">
+                  <div class="file-container" id="fileContainer">
+                      <div class="m-0 text-center" id="dropzoneTrigger">
+                        <i class="fas fa-upload"></i>
+                        <div class="codedropz-upload-handler">
+                          <div class="codedropz-upload-container">
+                            <div class="codedropz-upload-inner">
+                              <h5><span style="color: #16416e; text-decoration: underline;">Add Files</span> Or Drag &amp; Drop Files Here</h5>
+                              <span>(Limit to jpeg, png, gif, pdf at 3MB)</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="dropzonePreview" class="m-0 dz-default dz-message">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="one-col button">
+                <div class="btn-right">
+                  <button class="btn btn-dark-blue w-150" onclick="">SUBMIT</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="modal fade" id="serialModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title" id="myModalLabel">SERIAL NUMBER</h3>
+                    <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="assets/images/1.jpg" alt="Image">
+                    <div class="content">
+                      <p>Placeholder text, write anything here.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-3 col-md-3 col-lg-2 text-center text-sm-left footer-menu footer-menu-1">
+          <div class="footer-menu-title text-uppercase d-none">About Us</div>
+          <ul class="list-unstyled">
+            <li><a href="#">Terms And Conditions</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-3 col-md-3 col-lg-2 text-center text-sm-left footer-menu footer-menu-2">
+          <div class="footer-menu-title text-uppercase d-none">Warranty</div>
+          <ul class="list-unstyled">
+            <li><a href="#">Data Protection Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-5 text-center text-sm-left footer-menu footer-menu-3">
+          <div class="footer-menu-title text-uppercase d-none">Contact Us</div>
+          <ul class="list-unstyled d-none">
+            <li><a href="#">Our Office</a></li>
+            <li><a href="#">Our Dealers</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 col-lg-3 text-center text-sm-left footer-menu footer-menu-4">
+          <div class="footer-menu-title text-uppercase">Follow Us</div>
+          <ul class="list-unstyled social">
+            <li class="d-inline-block"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="d-inline-block"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li class="d-inline-block"><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="inner-content">
+            <p>COPYRIGHT © 2021 FUJIOH INTERNATIONAL TRADING PTE. ALL RIGHTS RESERVED. TERMS CONDITIONS APPLY.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Additional Scripts -->
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/owl.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/isotope.js"></script>
+  <script src="assets/js/accordions.js"></script>
+
+  <script src="assets/js/modernizr-custom.js"></script>
+  <script src="assets/js/vanilla-back-to-top.js"></script>
+  <script src="assets/js/dropzone/dropzone.min.js"></script>
+  <script src="assets/js/update.js"></script>
+
+  <script>
+    addBackToTop({
+      diameter: 36,
+      backgroundColor: 'rgb(22, 65, 110)',
+      textColor: '#fff',
+      scrollDuration: 500,
+      cornerOffset: 36,
+    });
+
+    dropzoneInit();
+    pageServiceRequestValidation();
+
+    jQuery('#preferredDate').on('change', function() {
+      
+      var myDate = new Date(jQuery(this).val());
+
+      if (myDate.getDay() == 6) {
+        jQuery('.radio-pm').addClass('d-none');
+      } else {
+        jQuery('.radio-pm').removeClass('d-none');
+      }
+    
+    });
+  </script>
+
+
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) {                   //declaring the array outside of the
+      if (!cleared[t.id]) {                      // function makes it static and global
+        cleared[t.id] = 1;  // you could use true and false, but that's more typing
+        t.value = '';         // with more chance of typos
+        t.style.color = '#fff';
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

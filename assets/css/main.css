@@ -799,7 +799,7 @@ footer .col-md-12 {
 }
 .modal-dialog {
     max-width: 650PX;
-    margin: 1.75rem auto;
+    /* margin: 1.75rem auto; */
 }
 .form-content.forgotp span {
     font-weight: bold;

@@ -102,6 +102,15 @@ function datepickerToggle() {
       }
     });
   });
+
+
+  jQuery( ".datepicker-alt" ).each(function() {
+    jQuery(this).datepicker({
+      altFormat: "d MM, yy",
+      dateFormat: "yy-mm-dd",
+      maxDate: dateToday,
+    });
+  });
 }
 
 function dropzoneInit() {
@@ -293,7 +302,7 @@ function pagePreRegistrationValidation() {
 			var validator = this;
 			setTimeout(function() {
 				validator.blockFocusCleanup = true;
-				element.focus();
+				// element.focus();
 				validator.blockFocusCleanup = false;
 			}, 1);
 		}
@@ -339,7 +348,8 @@ function pageUpdatePasswordValidation() {
 			var validator = this;
 			setTimeout(function() {
 				validator.blockFocusCleanup = true;
-				element.focus();
+				// element.focus();
+        // jQuery('.svg.password-match').css({"display" : "block"});
 				validator.blockFocusCleanup = false;
 			}, 1);
 		}
@@ -399,6 +409,7 @@ function pageRegisterProductValidation() {
         datedelivery: {
           required: true,
           date: true,
+          greaterThan: "#datepurchase"
         },
         postalcode: {
           required: false,
@@ -413,6 +424,15 @@ function pageRegisterProductValidation() {
       }
     });
   });
+
+  jQuery.validator.addMethod("greaterThan", 
+  function(value, element, params) {
+    if (!/Invalid|NaN/.test(new Date(value))) {
+      return new Date(value) > new Date($(params).val());
+    }
+
+    return isNaN(value) && isNaN($(params).val()) || (Number(value) > Number($(params).val())); 
+  }, 'Cannot be earlier than purchase date.');
 }
 
 function pageContactUsValidation() {
